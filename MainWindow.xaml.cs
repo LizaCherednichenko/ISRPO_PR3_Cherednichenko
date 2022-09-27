@@ -23,6 +23,36 @@ namespace ISRPO_PR3_Cherednichenko
         public MainWindow()
         {
             InitializeComponent();
+            X.Text = "5,5";
+            Y.Text = "4,3";
+            Z.Text = "2,8";
+            Itog.Text = "Ст. гр. 402 ИСП Чередниченко Е.К.";
+        }
+
+        private void Schet_Click(object sender, RoutedEventArgs e)
+        {
+            Itog.Text += Environment.NewLine + "Практическая работа 2";
+            //Считывание значения X
+                double x = double.Parse(X.Text);
+            //Вывод значения X в окно
+            Itog.Text += Environment.NewLine + "X = " + x.ToString();
+            //Считывание значения Y
+                double y = double.Parse(Y.Text);
+            //Вывод значения Y в окно
+            Itog.Text += Environment.NewLine + "Y = " + y.ToString();
+            //Считывание знгачения Z
+                double z = double.Parse(Z.Text);
+            //Вывод значения Z в окно
+            Itog.Text += Environment.NewLine + "Z = " + z.ToString();
+
+            //Вычисляем арифмитическое выражение
+                    double a = Math.Tan(x + y) * Math.Tan(x + y);
+                    double b = Math.Exp(y - z);
+                    double c = Math.Sqrt(Math.Cos(x * x) + Math.Sin(z * z));
+                    double u = a - b * c;
+            //Выводим результат в окно
+            Itog.Text += Environment.NewLine + "Результат U = " + u.ToString();
+
         }
     }
 }
