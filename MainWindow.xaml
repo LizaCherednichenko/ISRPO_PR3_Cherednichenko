@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ISRPO_PR3_Cherednichenko"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="ПР3 Чередниченко" Height="450" Width="549.5">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Введите значение x"/>
+        <TextBox x:Name="X" Grid.Column="1" Margin="0,6,6,6"/>
+        <Label Grid.Row="1" Content="Введите значение y" Margin="0,6,0,0"/>
+        <TextBox x:Name="Y" Grid.Column="1" Grid.Row="1" Margin="0,6,0,0"/>
+        <Label Grid.Row="2" Content="Введите значение z" Margin="0,6,0,0"/>
+        <TextBox x:Name="Z" Grid.Column="1" Grid.Row="2" Margin="0,6,0,0"/>
+        <TextBox x:Name="Itog" Grid.ColumnSpan="2" Grid.Row="2" Margin="0,46,0,0" Grid.RowSpan="2"/>
+        <Button x:Name="Schet" Grid.Column="1" Grid.Row="5" Content="Выполнить" Click="Schet_Click"/>
+
     </Grid>
 </Window>
